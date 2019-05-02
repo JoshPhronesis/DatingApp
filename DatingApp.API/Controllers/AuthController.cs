@@ -18,10 +18,10 @@ namespace DatingApp.API.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthRepository _repo;
-        private readonly IConfiguration configuration;
+        private readonly IConfiguration _config;
         public AuthController(IAuthRepository repo, IConfiguration configuration)
         {
-            this.configuration = configuration;
+            this._config = configuration;
             this._repo = repo;
         }
 
@@ -58,7 +58,7 @@ namespace DatingApp.API.Controllers
                     new Claim(ClaimTypes.Name, userFromRepo.Username)
                 }),
                 Expires = DateTime.Now.AddDays(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("AppSettings:Token").Value))
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value))
                                                             , SecurityAlgorithms.HmacSha256Signature)
             };
 
