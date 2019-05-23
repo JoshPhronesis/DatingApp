@@ -8,7 +8,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from 'ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
-import { BsDatepickerModule } from 'ngx-bootstrap';
+import { BsDatepickerModule, PaginationModule, ButtonsModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -59,8 +59,10 @@ export function tokenGetter(){
       ReactiveFormsModule,
       BsDropdownModule.forRoot(),
       BsDatepickerModule.forRoot(),
+      PaginationModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       TabsModule.forRoot(),
+      ButtonsModule.forRoot(),
       NgxGalleryModule,
       FileUploadModule,
       JwtModule.forRoot({
