@@ -18,6 +18,6 @@ export class MemberEditResolver implements Resolve<User> {
                 this.alertify.error('Problem retrieving data');
                 this.router.navigate(['/members']);
                 return of(null);
-            })
-        )}
-    }
+        })
+    )}
+}
