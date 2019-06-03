@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 @Injectable()
 export class MemberListsResolver implements Resolve<User[]> {
     pageNumber = 1;
-    pageSize = 24;
+    pageSize = 18;
     constructor(private userService: UserService, private router: Router,
         private alertify: AlertifyService) { }
 
