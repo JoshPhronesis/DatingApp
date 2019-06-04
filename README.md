@@ -17,8 +17,8 @@ A simple single page application(SPA) dating app where users can meet and intera
 - Asp.net core
 
 **Frontend**
-- Html
-- Css
+- HTML
+- CSS
 - Bootstrap
 - Javascript/Typescript
 - Angular
