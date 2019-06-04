@@ -1,4 +1,4 @@
-# DatingApp
+# Cupid Dating App
 A simple single page application(SPA) dating app where users can meet and interact with new people. 
 
 # Features Include
